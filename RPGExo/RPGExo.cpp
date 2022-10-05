@@ -21,8 +21,6 @@ class List
 private:
 	Node* head = nullptr;
 
-	
-
 public:
 	void AddFirst(int _data)
 	{
@@ -44,8 +42,8 @@ public:
 		else
 		{
 			Node* node = head;
-			while (node->next != nullptr)			
-				node = node->next;			
+			while (node->next != nullptr)
+				node = node->next;
 			node->next = new Node(_data);
 		}
 	}
@@ -85,7 +83,7 @@ public:
 			before->next = before->next->next;
 		}
 	}
-	
+
 	void RemoveFirst()
 	{
 		head = head->next;
@@ -93,7 +91,7 @@ public:
 	void RemoveLast()
 	{
 		Node* n = head;
-		while (n->next != nullptr)		
+		while (n->next != nullptr)
 			n = n->next;
 		FindBefore(n->data)->next = nullptr;
 	}
@@ -148,11 +146,9 @@ int main()
 	list.Remove(5);
 	list.RemoveLast();
 	list.RemoveFirst();
-	list.RemoveLast();
 	list.Display();
 	list.Clear();
-	cout << endl;
-	
+	cout << endl;	
 
 	/*
 	vector<int> tab = vector<int>();
